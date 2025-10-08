@@ -3,6 +3,7 @@ import { getApps, removeApps } from '../utils/localStorage';
 import downloadIcon from '../assets/icon-downloads.png';
 import ratingsIcon from '../assets/icon-ratings.png';
 import { shortNumber } from '../utils/apps';
+import NotFound from '../components/NotFound';
 
 const InstalledApps = () => {
   const [installed, setInstalled] = useState(() => getApps());

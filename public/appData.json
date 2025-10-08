@@ -1,0 +1,452 @@
+[
+  {
+    "image": "https://placehold.co/100x100/3282b8/ffffff/png?text=B_Chat",
+    "title": "Breeze Chat",
+    "companyName": "BlueWave Software Inc.",
+    "id": 101,
+    "description": "Instant messaging app with end-to-end encryption and custom themes. Fast, secure, and fun!",
+    "size": 55,
+    "reviews": 12450,
+    "ratingAvg": 4.6,
+    "downloads": 5800000,
+    "ratings": [
+      { "name": "1 star", "count": 250 },
+      { "name": "2 star", "count": 400 },
+      { "name": "3 star", "count": 1200 },
+      { "name": "4 star", "count": 3500 },
+      { "name": "5 star", "count": 7100 }
+    ]
+  },
+  {
+    "image": "https://placehold.co/100x100/00b894/ffffff/png?text=F_Fit",
+    "title": "Focus Fitness Tracker",
+    "companyName": "GreenStride Health",
+    "id": 102,
+    "description": "Comprehensive fitness tracking, workout plans, and calorie counter. Achieve your health goals!",
+    "size": 98,
+    "reviews": 8900,
+    "ratingAvg": 4.4,
+    "downloads": 2100000,
+    "ratings": [
+      { "name": "1 star", "count": 310 },
+      { "name": "2 star", "count": 500 },
+      { "name": "3 star", "count": 1000 },
+      { "name": "4 star", "count": 2800 },
+      { "name": "5 star", "count": 4290 }
+    ]
+  },
+  {
+    "image": "https://placehold.co/100x100/ff7675/ffffff/png?text=E_Shop",
+    "title": "EconoMart Shopping",
+    "companyName": "RetailTech Solutions",
+    "id": 103,
+    "description": "Shop millions of products with daily deals and fast delivery. Your ultimate online store.",
+    "size": 120,
+    "reviews": 35600,
+    "ratingAvg": 4.7,
+    "downloads": 15500000,
+    "ratings": [
+      { "name": "1 star", "count": 800 },
+      { "name": "2 star", "count": 1100 },
+      { "name": "3 star", "count": 2500 },
+      { "name": "4 star", "count": 7200 },
+      { "name": "5 star", "count": 24000 }
+    ]
+  },
+  {
+    "image": "https://placehold.co/100x100/feca57/000000/png?text=P_Edit",
+    "title": "PixelPro Photo Editor",
+    "companyName": "Creative Canvas Co.",
+    "id": 104,
+    "description": "Professional-grade photo editing with filters, effects, and advanced retouching tools.",
+    "size": 85,
+    "reviews": 18200,
+    "ratingAvg": 4.5,
+    "downloads": 7500000,
+    "ratings": [
+      { "name": "1 star", "count": 350 },
+      { "name": "2 star", "count": 600 },
+      { "name": "3 star", "count": 1800 },
+      { "name": "4 star", "count": 5000 },
+      { "name": "5 star", "count": 10450 }
+    ]
+  },
+  {
+    "image": "https://placehold.co/100x100/a29bfe/ffffff/png?text=C_Code",
+    "title": "CodeMentor IDE",
+    "companyName": "DevGenius Labs",
+    "id": 105,
+    "description": "Mobile integrated development environment for learning and practicing coding in multiple languages.",
+    "size": 150,
+    "reviews": 6100,
+    "ratingAvg": 4.8,
+    "downloads": 1500000,
+    "ratings": [
+      { "name": "1 star", "count": 50 },
+      { "name": "2 star", "count": 150 },
+      { "name": "3 star", "count": 300 },
+      { "name": "4 star", "count": 1600 },
+      { "name": "5 star", "count": 4000 }
+    ]
+  },
+  {
+    "image": "https://placehold.co/100x100/ff6b81/ffffff/png?text=W_News",
+    "title": "WorldView News",
+    "companyName": "Global Media Group",
+    "id": 106,
+    "description": "Breaking news, deep analysis, and live updates from around the world. Customizable feed.",
+    "size": 65,
+    "reviews": 15900,
+    "ratingAvg": 4.3,
+    "downloads": 6500000,
+    "ratings": [
+      { "name": "1 star", "count": 500 },
+      { "name": "2 star", "count": 800 },
+      { "name": "3 star", "count": 2200 },
+      { "name": "4 star", "count": 4500 },
+      { "name": "5 star", "count": 7900 }
+    ]
+  },
+  {
+    "image": "https://placehold.co/100x100/1dd1a1/ffffff/png?text=P_Play",
+    "title": "Pocket Puzzles Mania",
+    "companyName": "Casual Games Studio",
+    "id": 107,
+    "description": "A collection of thousands of relaxing and challenging puzzle games. Daily new content.",
+    "size": 40,
+    "reviews": 25000,
+    "ratingAvg": 4.6,
+    "downloads": 10500000,
+    "ratings": [
+      { "name": "1 star", "count": 450 },
+      { "name": "2 star", "count": 700 },
+      { "name": "3 star", "count": 1500 },
+      { "name": "4 star", "count": 5300 },
+      { "name": "5 star", "count": 17050 }
+    ]
+  },
+  {
+    "image": "https://placehold.co/100x100/54a0ff/ffffff/png?text=M_Bank",
+    "title": "MySecure Mobile Bank",
+    "companyName": "Nexus Financial Services",
+    "id": 108,
+    "description": "Manage your finances, transfer money, and pay bills securely from anywhere.",
+    "size": 75,
+    "reviews": 9800,
+    "ratingAvg": 4.7,
+    "downloads": 4800000,
+    "ratings": [
+      { "name": "1 star", "count": 100 },
+      { "name": "2 star", "count": 200 },
+      { "name": "3 star", "count": 800 },
+      { "name": "4 star", "count": 3000 },
+      { "name": "5 star", "count": 5700 }
+    ]
+  },
+  {
+    "image": "https://placehold.co/100x100/ee5253/ffffff/png?text=V_Trip",
+    "title": "Voyage Travel Planner",
+    "companyName": "Horizon Apps Ltd.",
+    "id": 109,
+    "description": "Plan your next trip, book flights, hotels, and track your itinerary seamlessly.",
+    "size": 110,
+    "reviews": 7200,
+    "ratingAvg": 4.2,
+    "downloads": 1900000,
+    "ratings": [
+      { "name": "1 star", "count": 450 },
+      { "name": "2 star", "count": 650 },
+      { "name": "3 star", "count": 1500 },
+      { "name": "4 star", "count": 2000 },
+      { "name": "5 star", "count": 2600 }
+    ]
+  },
+  {
+    "image": "https://placehold.co/100x100/10ac84/ffffff/png?text=S_Synth",
+    "title": "SoundScape Synthesizer",
+    "companyName": "Acoustic Innovations",
+    "id": 110,
+    "description": "Powerful mobile music creation tool with a full-featured synthesizer and sequencer.",
+    "size": 210,
+    "reviews": 3500,
+    "ratingAvg": 4.9,
+    "downloads": 850000,
+    "ratings": [
+      { "name": "1 star", "count": 20 },
+      { "name": "2 star", "count": 80 },
+      { "name": "3 star", "count": 150 },
+      { "name": "4 star", "count": 900 },
+      { "name": "5 star", "count": 2350 }
+    ]
+  },
+  {
+    "image": "https://placehold.co/100x100/576574/ffffff/png?text=R_Read",
+    "title": "Rapid Reader Ebooks",
+    "companyName": "Literary Nexus",
+    "id": 111,
+    "description": "Access a huge library of ebooks and audiobooks. Customizable reading experience.",
+    "size": 60,
+    "reviews": 11200,
+    "ratingAvg": 4.5,
+    "downloads": 3200000,
+    "ratings": [
+      { "name": "1 star", "count": 300 },
+      { "name": "2 star", "count": 500 },
+      { "name": "3 star", "count": 1000 },
+      { "name": "4 star", "count": 3000 },
+      { "name": "5 star", "count": 6400 }
+    ]
+  },
+  {
+    "image": "https://placehold.co/100x100/cc8e35/ffffff/png?text=D_Drive",
+    "title": "DriveFlow Navigation",
+    "companyName": "Geo-Path Solutions",
+    "id": 112,
+    "description": "Real-time GPS navigation with traffic updates and offline map support.",
+    "size": 180,
+    "reviews": 14500,
+    "ratingAvg": 4.1,
+    "downloads": 8800000,
+    "ratings": [
+      { "name": "1 star", "count": 900 },
+      { "name": "2 star", "count": 1500 },
+      { "name": "3 star", "count": 2500 },
+      { "name": "4 star", "count": 4000 },
+      { "name": "5 star", "count": 5600 }
+    ]
+  },
+  {
+    "image": "https://placehold.co/100x100/e056fd/ffffff/png?text=S_Scan",
+    "title": "SwiftScan Document OCR",
+    "companyName": "Digital Paperworks",
+    "id": 113,
+    "description": "Scan documents, convert to PDF, and extract text using advanced OCR technology.",
+    "size": 80,
+    "reviews": 6800,
+    "ratingAvg": 4.7,
+    "downloads": 2300000,
+    "ratings": [
+      { "name": "1 star", "count": 120 },
+      { "name": "2 star", "count": 180 },
+      { "name": "3 star", "count": 500 },
+      { "name": "4 star", "count": 2000 },
+      { "name": "5 star", "count": 4000 }
+    ]
+  },
+  {
+    "image": "https://placehold.co/100x100/ff9f43/ffffff/png?text=H_Home",
+    "title": "Home Harmony Control",
+    "companyName": "SmartLiving Tech",
+    "id": 114,
+    "description": "Connect and control all your smart home devices from a single, intuitive interface.",
+    "size": 90,
+    "reviews": 4200,
+    "ratingAvg": 4.6,
+    "downloads": 1100000,
+    "ratings": [
+      { "name": "1 star", "count": 50 },
+      { "name": "2 star", "count": 150 },
+      { "name": "3 star", "count": 400 },
+      { "name": "4 star", "count": 1200 },
+      { "name": "5 star", "count": 2400 }
+    ]
+  },
+  {
+    "image": "https://placehold.co/100x100/c7ecee/000000/png?text=A_Art",
+    "title": "AetherSketch Drawing",
+    "companyName": "Digital Brushes Inc.",
+    "id": 115,
+    "description": "A powerful digital drawing and painting app with a vast collection of brushes and layers.",
+    "size": 170,
+    "reviews": 10500,
+    "ratingAvg": 4.8,
+    "downloads": 4000000,
+    "ratings": [
+      { "name": "1 star", "count": 150 },
+      { "name": "2 star", "count": 250 },
+      { "name": "3 star", "count": 500 },
+      { "name": "4 star", "count": 2500 },
+      { "name": "5 star", "count": 7100 }
+    ]
+  },
+  {
+    "image": "https://placehold.co/100x100/48dbfb/000000/png?text=E_Learn",
+    "title": "EduQuest Learning",
+    "companyName": "Knowledge Bridge Ltd.",
+    "id": 116,
+    "description": "Interactive courses and lessons on various subjects for all age groups. Test your knowledge!",
+    "size": 70,
+    "reviews": 16000,
+    "ratingAvg": 4.4,
+    "downloads": 6000000,
+    "ratings": [
+      { "name": "1 star", "count": 600 },
+      { "name": "2 star", "count": 900 },
+      { "name": "3 star", "count": 2000 },
+      { "name": "4 star", "count": 4500 },
+      { "name": "5 star", "count": 8000 }
+    ]
+  },
+  {
+    "image": "https://placehold.co/100x100/9b59b6/ffffff/png?text=C_Call",
+    "title": "CommuniCall VoIP",
+    "companyName": "Global Connect Telecom",
+    "id": 117,
+    "description": "Crystal clear voice and video calls over the internet. Low international rates.",
+    "size": 45,
+    "reviews": 5500,
+    "ratingAvg": 4.5,
+    "downloads": 2000000,
+    "ratings": [
+      { "name": "1 star", "count": 100 },
+      { "name": "2 star", "count": 250 },
+      { "name": "3 star", "count": 650 },
+      { "name": "4 star", "count": 1500 },
+      { "name": "5 star", "count": 3000 }
+    ]
+  },
+  {
+    "image": "https://placehold.co/100x100/e17055/ffffff/png?text=F_Food",
+    "title": "FlavorFind Recipe App",
+    "companyName": "Culinary Tech Group",
+    "id": 118,
+    "description": "Discover new recipes, save your favorites, and create custom meal plans.",
+    "size": 105,
+    "reviews": 9000,
+    "ratingAvg": 4.7,
+    "downloads": 3500000,
+    "ratings": [
+      { "name": "1 star", "count": 50 },
+      { "name": "2 star", "count": 150 },
+      { "name": "3 star", "count": 600 },
+      { "name": "4 star", "count": 2200 },
+      { "name": "5 star", "count": 6000 }
+    ]
+  },
+  {
+    "image": "https://placehold.co/100x100/fed330/000000/png?text=T_Time",
+    "title": "TimeFlow Productivity",
+    "companyName": "Efficiency Tools Co.",
+    "id": 119,
+    "description": "A robust task manager, calendar, and habit tracker to keep you on track.",
+    "size": 50,
+    "reviews": 7800,
+    "ratingAvg": 4.8,
+    "downloads": 2800000,
+    "ratings": [
+      { "name": "1 star", "count": 80 },
+      { "name": "2 star", "count": 120 },
+      { "name": "3 star", "count": 400 },
+      { "name": "4 star", "count": 1800 },
+      { "name": "5 star", "count": 5400 }
+    ]
+  },
+  {
+    "image": "https://placehold.co/100x100/4b6584/ffffff/png?text=G_Games",
+    "title": "Galaxy Guardians RTS",
+    "companyName": "Stellar Strategy Games",
+    "id": 120,
+    "description": "Real-time strategy game set in space. Build your fleet and conquer the galaxy!",
+    "size": 350,
+    "reviews": 32000,
+    "ratingAvg": 4.3,
+    "downloads": 12000000,
+    "ratings": [
+      { "name": "1 star", "count": 2000 },
+      { "name": "2 star", "count": 3000 },
+      { "name": "3 star", "count": 5000 },
+      { "name": "4 star", "count": 8000 },
+      { "name": "5 star", "count": 14000 }
+    ]
+  },
+  {
+    "image": "https://placehold.co/100x100/ff4757/ffffff/png?text=W_Weather",
+    "title": "WeatherWise Forecast",
+    "companyName": "Atmosphere Data Inc.",
+    "id": 121,
+    "description": "Highly accurate 10-day forecasts, radar maps, and severe weather alerts.",
+    "size": 30,
+    "reviews": 19500,
+    "ratingAvg": 4.5,
+    "downloads": 9500000,
+    "ratings": [
+      { "name": "1 star", "count": 550 },
+      { "name": "2 star", "count": 850 },
+      { "name": "3 star", "count": 2000 },
+      { "name": "4 star", "count": 5000 },
+      { "name": "5 star", "count": 11100 }
+    ]
+  },
+  {
+    "image": "https://placehold.co/100x100/2ed573/000000/png?text=V_Video",
+    "title": "Vivid Stream Player",
+    "companyName": "Media Hub Solutions",
+    "id": 122,
+    "description": "A versatile video player supporting all formats with subtitle and casting features.",
+    "size": 60,
+    "reviews": 11800,
+    "ratingAvg": 4.6,
+    "downloads": 4500000,
+    "ratings": [
+      { "name": "1 star", "count": 150 },
+      { "name": "2 star", "count": 300 },
+      { "name": "3 star", "count": 900 },
+      { "name": "4 star", "count": 3400 },
+      { "name": "5 star", "count": 7050 }
+    ]
+  },
+  {
+    "image": "https://placehold.co/100x100/1e90ff/ffffff/png?text=S_Share",
+    "title": "SocialSphere Network",
+    "companyName": "Connect World LLC",
+    "id": 123,
+    "description": "Connect with friends, share your life moments, and join communities.",
+    "size": 130,
+    "reviews": 45000,
+    "ratingAvg": 4.2,
+    "downloads": 25000000,
+    "ratings": [
+      { "name": "1 star", "count": 3000 },
+      { "name": "2 star", "count": 4500 },
+      { "name": "3 star", "count": 7000 },
+      { "name": "4 star", "count": 11000 },
+      { "name": "5 star", "count": 19500 }
+    ]
+  },
+  {
+    "image": "https://placehold.co/100x100/5352ed/ffffff/png?text=L_Lang",
+    "title": "LinguaLift Language",
+    "companyName": "Global Tutors Inc.",
+    "id": 124,
+    "description": "Learn a new language with gamified lessons, native speaker audio, and personalized plans.",
+    "size": 95,
+    "reviews": 8500,
+    "ratingAvg": 4.9,
+    "downloads": 3000000,
+    "ratings": [
+      { "name": "1 star", "count": 50 },
+      { "name": "2 star", "count": 100 },
+      { "name": "3 star", "count": 350 },
+      { "name": "4 star", "count": 2000 },
+      { "name": "5 star", "count": 6000 }
+    ]
+  },
+  {
+    "image": "https://placehold.co/100x100/2c3e50/ffffff/png?text=P_Pass",
+    "title": "CipherGuard Password",
+    "companyName": "Secure Vault Solutions",
+    "id": 125,
+    "description": "Securely store and manage all your passwords and sensitive information with military-grade encryption.",
+    "size": 35,
+    "reviews": 3800,
+    "ratingAvg": 4.7,
+    "downloads": 900000,
+    "ratings": [
+      { "name": "1 star", "count": 30 },
+      { "name": "2 star", "count": 70 },
+      { "name": "3 star", "count": 200 },
+      { "name": "4 star", "count": 1000 },
+      { "name": "5 star", "count": 2500 }
+    ]
+  }
+]

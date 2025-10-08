@@ -6,7 +6,7 @@ import States from './states';
 
 const Banner = () => {
   return (
-    <div className="text-center mt-5 md:mt-20">
+    <div className="text-center mt-5 md:mt-20 ">
       <div className="space-y-4 max-w-11/12 mx-auto">
         <h2 className="text-4xl md:text-7xl font-bold">
           We Build{' '}

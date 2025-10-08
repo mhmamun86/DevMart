@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams } from 'react-router';
 import useApps from '../Hooks/useFetchData';
 import downloadIcon from '../assets/icon-downloads.png';
@@ -15,14 +15,24 @@ import {
   ResponsiveContainer,
   Rectangle,
 } from 'recharts';
+import { getApps, updateApps } from '../utils/localStorage';
+import Spinner from '../components/Spinner';
 
 const AppDetails = () => {
   const data = useApps();
   const { apps, loading, error } = data;
   const { id } = useParams();
   const appId = parseInt(id);
-  if (loading) return <span>Loading....</span>;
+
+  const [installed, setInstalled] = useState(() => getApps());
+  const handleInstall = () => {
+    const updated = updateApps(app);
+    setInstalled(updated);
+  };
+
+  if (loading) return <Spinner></Spinner>;
   const app = apps.find(el => el.id === appId);
+  const isDuplicate = installed.some(el => el.id === app.id);
   const {
     image,
     title,
@@ -32,13 +42,14 @@ const AppDetails = () => {
     reviews,
     size,
     ratings,
+    description,
   } = app;
 
   const ratingData = ratings.slice().reverse();
 
   return (
     <div className="max-w-11/12 mx-auto my-10">
-      <div className="flex-col flex md:flex-row items-center gap-3.5 ">
+      <div className="flex-col flex md:flex-row items-center gap-10 ">
         <div>
           <img className="h-[300px] md:h-[350px]" src={image} alt={title} />
         </div>
@@ -74,14 +85,19 @@ const AppDetails = () => {
               </span>
             </div>
           </div>
-          <button className="btn bg-[#00D390] px-5 py-3.5 text-white font-semibold text-xl">
+          <button
+            onClick={handleInstall}
+            disabled={isDuplicate}
+            className="btn bg-[#00D390] px-5 py-3.5 text-white font-semibold text-xl"
+          >
             {' '}
-            Install Now ({size} MB){' '}
+            {isDuplicate ? 'Installed' : `Install Now (${size} MB)`}{' '}
           </button>
         </div>
       </div>
       <div className="my-7 border-t-1 opacity-20 "></div>
-      <div style={{ width: '100%', height: 300 }}>
+      <div className="mb-15" style={{ width: '100%', height: 300 }}>
+        <h2 className="font-semibold text-2xl mb-2">Ratings</h2>
         <ResponsiveContainer width="100%" height="100%">
           <BarChart
             layout="vertical"
@@ -106,6 +122,11 @@ const AppDetails = () => {
             />
           </BarChart>
         </ResponsiveContainer>
+      </div>
+      <div className="my-7 border-t-1 opacity-20 "></div>
+      <div className="mt-7 mb-20">
+        <h2 className="font-semibold text-2xl mb-6">Description</h2>
+        <p className="text-[#627382] text-xl">{description}</p>
       </div>
     </div>
   );

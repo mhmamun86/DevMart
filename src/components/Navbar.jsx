@@ -13,12 +13,12 @@ const Navbar = () => {
         <NavLink to={'/apps'}>Apps</NavLink>
       </li>
       <li className="p-2">
-        <a>Installation</a>
+        <NavLink to={'/installed'}>Installation</NavLink>
       </li>
     </>
   );
   return (
-    <div className=" border-b-1 border-[#E9E9E9]">
+    <div className=" border-b-1 bg-white border-[#E9E9E9]">
       <div className="navbar w-11/12 mx-auto ">
         <div className="navbar-start max-w-11/12">
           <div className="dropdown">

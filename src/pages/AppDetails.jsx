@@ -59,7 +59,7 @@ const AppDetails = () => {
         <div className="bg-white rounded-tl-4xl rounded-br-4xl flex justify-center items-center">
           <img className="h-[300px] md:h-[350px]" src={image} alt={title} />
         </div>
-        <div className="">
+        <div className="flex flex-col">
           <div className="justify-center flex-col items-center text-center md:text-left md:block">
             <h1 className="font-bold text-3xl mb-2">{title}</h1>
             <p>
@@ -69,21 +69,21 @@ const AppDetails = () => {
           </div>
           <div className="mt-7 border-t-1 opacity-20 "></div>
           <div className="flex gap-5 md:gap-10 lg:gap-14 my-2">
-            <div className="py-7 space-y-2">
+            <div className="py-7 space-y-2 flex flex-col items-center md:items-start text-center">
               <img className="h-8" src={downloadIcon} alt="download" />
               <p className="opacity-80">Downloads</p>
               <span className=" text-2xl md:text-4xl font-extrabold">
                 {shortNumber(downloads)}
               </span>
             </div>
-            <div className="py-7 space-y-2">
+            <div className="py-7 space-y-2 flex flex-col items-center md:items-start text-center">
               <img className="h-8" src={ratingIcon} alt="ratings" />
               <p className="opacity-80">Average Ratings</p>
               <span className="text-2xl md:text-4xl font-extrabold">
                 {ratingAvg}
               </span>
             </div>
-            <div className="py-7 space-y-2">
+            <div className="py-7 space-y-2 flex flex-col items-center md:items-start text-center">
               <img className="h-8" src={reviewIcon} alt="reviews" />
               <p className="opacity-80">Total Reviews</p>
               <span className="text-2xl md:text-4xl font-extrabold">
@@ -91,14 +91,16 @@ const AppDetails = () => {
               </span>
             </div>
           </div>
-          <button
-            onClick={() => updateApps(app, installed, setInstalled)}
-            disabled={isDuplicate}
-            className="btn bg-[#00D390] px-5 py-3.5 text-white font-semibold text-xl"
-          >
-            {' '}
-            {isDuplicate ? 'Installed' : `Install Now (${size} MB)`}{' '}
-          </button>
+          <div className="flex flex-col items-center gap-3">
+            <button
+              onClick={() => updateApps(app, installed, setInstalled)}
+              disabled={isDuplicate}
+              className="btn w-auto bg-[#00D390] px-5 py-3.5 text-white font-semibold text-xl"
+            >
+              {' '}
+              {isDuplicate ? 'Installed' : `Install Now (${size} MB)`}{' '}
+            </button>
+          </div>
         </div>
       </div>
       <div className="my-7 border-t-1 opacity-20 "></div>

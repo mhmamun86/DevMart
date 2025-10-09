@@ -5,8 +5,12 @@ import ratingsIcon from '../assets/icon-ratings.png';
 import { shortNumber } from '../utils/apps';
 import NotFound from '../components/NotFound';
 import { useNavigate } from 'react-router';
+import useApps from '../Hooks/useFetchData';
+import Spinner from '../components/Spinner';
 
 const InstalledApps = () => {
+  const data = useApps();
+  const { apps, loading } = data;
   const [installed, setInstalled] = useState(() => getApps());
   const handleUninstall = id => {
     const updated = removeApps(id, setInstalled);
@@ -53,71 +57,80 @@ const InstalledApps = () => {
           </label>
         </div>
       </div>
-      {installed.length ? (
+      {loading ? (
+        <Spinner></Spinner>
+      ) : (
         <div>
-          <ul className="space-y-3  p-3 rounded-box ">
-            {sortedItem.map(app => {
-              return (
-                <li
-                  key={app.id}
-                  className="bg-white flex justify-between gap-4 p-3 rounded-lg"
-                >
-                  <div
-                    onClick={() => navigate(`/appsDetails/${app.id}`)}
-                    className="flex gap-3"
-                  >
-                    <div>
-                      <img className="size-10 rounded-box" src={app.image} />
-                    </div>
-                    <div>
-                      <div>{app.title}</div>
-                      <div className="text-xs font-semibold opacity-60 flex gap-4">
-                        <div className="flex gap-1.5 items-center">
-                          <img className="h-3" src={downloadIcon} alt="" />
-                          <span className="text-[#00D390] font-medium">
-                            {shortNumber(app.downloads)}
-                          </span>
-                        </div>
-                        <div className="flex gap-1.5 items-center">
-                          <img className="h-3" src={ratingsIcon} alt="" />
-                          <span className="text-[#FF8811] font-medium">
-                            {app.ratingAvg}
-                          </span>
+          {installed.length ? (
+            <div>
+              <ul className="space-y-3  p-3 rounded-box ">
+                {sortedItem.map(app => {
+                  return (
+                    <li
+                      key={app.id}
+                      className="bg-white flex justify-between gap-4 p-3 rounded-lg"
+                    >
+                      <div
+                        onClick={() => navigate(`/appsDetails/${app.id}`)}
+                        className="flex gap-3"
+                      >
+                        <div>
+                          <img
+                            className="size-10 rounded-box"
+                            src={app.image}
+                          />
                         </div>
                         <div>
-                          <p>
-                            <span>{app.size} </span> MB
-                          </p>
+                          <div>{app.title}</div>
+                          <div className="text-xs font-semibold opacity-60 flex gap-4">
+                            <div className="flex gap-1.5 items-center">
+                              <img className="h-3" src={downloadIcon} alt="" />
+                              <span className="text-[#00D390] font-medium">
+                                {shortNumber(app.downloads)}
+                              </span>
+                            </div>
+                            <div className="flex gap-1.5 items-center">
+                              <img className="h-3" src={ratingsIcon} alt="" />
+                              <span className="text-[#FF8811] font-medium">
+                                {app.ratingAvg}
+                              </span>
+                            </div>
+                            <div>
+                              <p>
+                                <span>{app.size} </span> MB
+                              </p>
+                            </div>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
 
-                  <button
-                    onClick={() => removeApps(app.id, setInstalled)}
-                    className="btn bg-[#00D390] text-white"
-                  >
-                    uninstall
-                  </button>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
-      ) : (
-        <div className="p-20 flex flex-col justify-center items-center">
-          <h2 className="text-2xl opacity-70 text-center">
-            No Apps Installed{' '}
-          </h2>
-          <p className="text-xl opacity-40 text-center">
-            Go Back and install app
-          </p>
-          <div
-            onClick={() => navigate(`/apps`)}
-            className="btn  mt-6 text-white bg-linear-to-r from-[#632EE3] to-[#9F62F2] mb-8"
-          >
-            Show All Apps
-          </div>
+                      <button
+                        onClick={() => removeApps(app.id, setInstalled)}
+                        className="btn bg-[#00D390] text-white"
+                      >
+                        uninstall
+                      </button>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          ) : (
+            <div className="p-20 flex flex-col justify-center items-center">
+              <h2 className="text-2xl opacity-70 text-center">
+                No Apps Installed{' '}
+              </h2>
+              <p className="text-xl opacity-40 text-center">
+                Go Back and install app
+              </p>
+              <div
+                onClick={() => navigate(`/apps`)}
+                className="btn  mt-6 text-white bg-linear-to-r from-[#632EE3] to-[#9F62F2] mb-8"
+              >
+                Show All Apps
+              </div>
+            </div>
+          )}
         </div>
       )}
     </div>

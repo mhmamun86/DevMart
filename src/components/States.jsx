@@ -15,8 +15,8 @@ const States = () => {
         <h1 className="text-3xl md:text-5xl font-bold mb-10">
           Trusted by Millions, Built for You
         </h1>
-        <div className="md:stats ">
-          <div className="stat space-y-4">
+        <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="stat space-y-4 shadow-md hover:shadow-lg transition duration-300">
             <div className="opacity-80">
               <h3>Total Downloads</h3>
             </div>
@@ -26,7 +26,7 @@ const States = () => {
             <div className="opacity-80">21% more than last month</div>
           </div>
 
-          <div className="stat space-y-4">
+          <div className="stat space-y-4 shadow-md hover:shadow-lg transition duration-30">
             <div className="opacity-80">
               <h3>Total Reviews</h3>
             </div>
@@ -36,7 +36,7 @@ const States = () => {
             <div className="opacity-80">21% more than last month</div>
           </div>
 
-          <div className="stat space-y-4">
+          <div className="stat space-y-4 shadow-md hover:shadow-lg transition duration-30">
             <div className="opacity-80">
               <h3>Active Apps</h3>
             </div>

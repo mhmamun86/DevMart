@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
-import useApps from '../Hooks/useFetchData';
+
 import downloadIcon from '../assets/icon-downloads.png';
 import ratingIcon from '../assets/icon-ratings.png';
 import reviewIcon from '../assets/icon-review.png';
@@ -18,22 +18,23 @@ import {
 } from 'recharts';
 import { getApps, updateApps } from '../utils/localStorage';
 import Spinner from '../components/Spinner';
-import CountUp from 'react-countup';
+import useApps from '../Hooks/useFetchData';
 
 const AppDetails = () => {
   const data = useApps();
-  const { apps, loading, error } = data;
+  const { apps, loading } = data;
   const { id } = useParams();
+  useEffect(() => {
+    if (!/^\d+$/.test(id)) {
+      throw new Response('Invalid app ID');
+    }
+  }, [id]);
   const appId = parseInt(id);
-
   const [installed, setInstalled] = useState(() => getApps());
-  const handleInstall = () => {
-    const updated = updateApps(app);
-    setInstalled(updated);
-  };
 
   if (loading) return <Spinner></Spinner>;
   const app = apps.find(el => el.id === appId);
+  console.log(app.id);
   if (!app) {
     return <NotFound></NotFound>;
   }
@@ -92,7 +93,7 @@ const AppDetails = () => {
             </div>
           </div>
           <button
-            onClick={handleInstall}
+            onClick={() => updateApps(app, installed, setInstalled)}
             disabled={isDuplicate}
             className="btn bg-[#00D390] px-5 py-3.5 text-white font-semibold text-xl"
           >

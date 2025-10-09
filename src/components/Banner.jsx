@@ -3,10 +3,8 @@ import playLogo from '../assets/play.png';
 import appleLogo from '../assets/apple.png';
 import hero from '../assets/hero.png';
 import States from './states';
-import { useNavigate } from 'react-router';
 
 const Banner = () => {
-  const navigate = useNavigate();
   return (
     <div className="text-center mt-5 md:mt-20 ">
       <div className="space-y-4 max-w-11/12 mx-auto">
@@ -26,7 +24,7 @@ const Banner = () => {
             href="https://www.apple.com/app-store/"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-3 border border-gray-300 rounded-xl px-5 py-3 bg-white hover:shadow-lg hover:border-gray-400 hover:scale-105 transition-all duration-300"
+            className="banner-btn"
           >
             <img className="w-8 h-8" src={appleLogo} alt="App Store" />
             <div className="text-left leading-tight">
@@ -37,7 +35,7 @@ const Banner = () => {
             href="https://play.google.com/store"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-3 border border-gray-300 rounded-xl px-5 py-3 bg-white hover:shadow-lg hover:border-gray-400 hover:scale-105 transition-all duration-300"
+            className="banner-btn"
           >
             <img className="w-8 h-8" src={playLogo} alt="Play Store" />
             <div className="text-left leading-tight">

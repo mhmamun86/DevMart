@@ -8,7 +8,7 @@ const App = ({ app }) => {
   const { title, image, id, downloads, ratingAvg } = app;
   const navigate = useNavigate();
   return (
-    <div onClick={() => navigate(`/appsDetails/${id}`)}>
+    <div onClick={() => navigate(`/apps/appsDetails/${id}`)}>
       <div className="card space-y-4 bg-base-100 shadow-sm hover:scale-105 transition ease-in-out p-4 cursor-pointer">
         <figure className="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
           <img

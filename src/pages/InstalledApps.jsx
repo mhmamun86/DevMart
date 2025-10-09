@@ -1,25 +1,20 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { getApps, removeApps } from '../utils/localStorage';
 import downloadIcon from '../assets/icon-downloads.png';
 import ratingsIcon from '../assets/icon-ratings.png';
 import { shortNumber } from '../utils/apps';
-import NotFound from '../components/NotFound';
 import { useNavigate } from 'react-router';
 import useApps from '../Hooks/useFetchData';
 import Spinner from '../components/Spinner';
 
 const InstalledApps = () => {
   const data = useApps();
-  const { apps, loading } = data;
+  const { loading } = data;
   const [installed, setInstalled] = useState(() => getApps());
-  const handleUninstall = id => {
-    const updated = removeApps(id, setInstalled);
-  };
   const navigate = useNavigate();
   const [sortOrder, setSortOrder] = useState('none');
   const sortedItem = (() => {
     const items = [...installed];
-    console.log(items);
     if (sortOrder === 'low') {
       return items.sort((a, b) => a.downloads - b.downloads);
     } else if (sortOrder === 'high') {

@@ -11,16 +11,15 @@ const getApps = () => {
   }
 };
 
-const updateApps = app => {
-  const installed = getApps();
+const updateApps = (app, installed, setInstalled) => {
   const isDuplicate = installed.some(el => el.id === app.id);
-  if (isDuplicate) return installed;
   if (isDuplicate) {
     return installed;
   } else {
     const updated = [...installed, app];
     localStorage.setItem('installed', JSON.stringify(updated));
     toast.success(`Successfully Installed ${app.title} `);
+    setInstalled(updated);
     return updated;
   }
 };

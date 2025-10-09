@@ -2,7 +2,6 @@
 
 @import 'tailwindcss';
 @plugin "daisyui";
-
 @theme {
   --font-inter: 'Inter', sans-serif;
 }
@@ -17,4 +16,9 @@ a.active {
 
 .text-gradiant {
   @apply bg-linear-to-r from-[#632EE3] to-[#9F62F2] text-transparent bg-clip-text;
+}
+.banner-btn {
+  @apply flex items-center gap-3 border border-gray-300 rounded-xl px-5 py-3 bg-white 
+      hover:shadow-lg hover:border-gray-400 hover:scale-105 
+      transition-all duration-300;
 }

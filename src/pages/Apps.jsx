@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import { getApps } from '../utils/localStorage';
+import React, { useState } from 'react';
 import useApps from '../Hooks/useFetchData';
 import App from './App';
 import Loader from '../components/Loader';
 import NotFound from '../components/NotFound';
+import { searchItems } from '../utils/apps';
 
 const Apps = () => {
   const data = useApps();
@@ -12,35 +12,22 @@ const Apps = () => {
   const [searchLoading, setSearchLoading] = useState(false);
   const [searchedData, setSearchedData] = useState([]);
 
-  useEffect(() => {
-    const term = search.trim().toLowerCase();
-
-    if (term) {
-      setSearchLoading(true);
-
-      const timer = setTimeout(() => {
-        const filtered = apps.filter(data =>
-          data.title.toLowerCase().includes(term)
-        );
-        setSearchedData(filtered);
-        setSearchLoading(false);
-      }, 300);
-
-      return () => clearTimeout(timer);
-    } else {
-      setSearchedData(apps);
-      setSearchLoading(false);
-    }
-  }, [search, apps]);
+  const searching = searchItems({
+    search,
+    searchLoading,
+    setSearchLoading,
+    apps,
+    setSearchedData,
+  });
 
   return (
     <div className="max-w-11/12 mx-auto py-10 md:py-20">
       <div className="text-center">
         <h2 className="font-bold text-3xl lg:text-5xl mb-4">
-          Your Installed Apps
+          Our All Applications
         </h2>
         <p className="text-xl text-[#627382]">
-          Explore All Trending Apps on the Market developed by us
+          Explore All Apps on the Market developed by us. We code for Millions
         </p>
       </div>
       <div className="space-y-6">

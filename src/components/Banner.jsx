@@ -16,28 +16,34 @@ const Banner = () => {
             Productive <span className="text-black">Apps</span>
           </span>{' '}
         </h2>
-        <p className="text-[#627382] text-xl">
+        <p className="text-[#627382] text-lg md:text-xl">
           At Dev Mart , we craft innovative apps designed to make everyday life
           simpler, smarter, and more exciting. Our goal is to turn your ideas
           into digital experiences that truly make an impact.
         </p>
-        <div className="flex gap-4 items-center justify-center">
-          <div
-            onClick={() => window.open('https://play.google.com/', '_blank')}
-            className="flex gap-2.5 items-center py-3 md:px-6 px-3 rounded-sm border-2 border-[#D2D2D2] cursor-pointer"
+        <div className="flex flex-wrap justify-center gap-4 mb-10">
+          <a
+            href="https://www.apple.com/app-store/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-3 border border-gray-300 rounded-xl px-5 py-3 bg-white hover:shadow-lg hover:border-gray-400 hover:scale-105 transition-all duration-300"
           >
-            <img className="h-8" src={playLogo} />
-            <h3 className="font-semibold text-sm md:text-xl">Google Play</h3>
-          </div>
-          <div
-            onClick={() =>
-              window.open('https://www.apple.com/app-store/', '_blank')
-            }
-            className="flex gap-2.5 items-center py-3 px-6 rounded-sm border-2 border-[#D2D2D2] cursor-pointer"
+            <img className="w-8 h-8" src={appleLogo} alt="App Store" />
+            <div className="text-left leading-tight">
+              <p className="font-semibold text-black">App Store</p>
+            </div>
+          </a>
+          <a
+            href="https://play.google.com/store"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-3 border border-gray-300 rounded-xl px-5 py-3 bg-white hover:shadow-lg hover:border-gray-400 hover:scale-105 transition-all duration-300"
           >
-            <img className="h-8" src={appleLogo} />
-            <h3 className="font-semibold text-sm md:text-xl">App Store</h3>
-          </div>
+            <img className="w-8 h-8" src={playLogo} alt="Play Store" />
+            <div className="text-left leading-tight">
+              <p className="font-semibold text-black">Play Store</p>
+            </div>
+          </a>
         </div>
         <div className="flex justify-center items-center mb-0">
           <img src={hero} />

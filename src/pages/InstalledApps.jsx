@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { getApps, removeApps } from '../utils/localStorage';
 import downloadIcon from '../assets/icon-downloads.png';
 import ratingsIcon from '../assets/icon-ratings.png';
@@ -18,12 +18,14 @@ const InstalledApps = () => {
   const navigate = useNavigate();
   const [sortOrder, setSortOrder] = useState('none');
   const sortedItem = (() => {
-    if (sortOrder === 'download-asc') {
-      return [...installed].sort((a, b) => a.downloads - b.downloads);
-    } else if (sortOrder === 'download-desc') {
-      return [...installed].sort((a, b) => b.downloads - a.downloads);
+    const items = [...installed];
+    console.log(items);
+    if (sortOrder === 'low') {
+      return items.sort((a, b) => a.downloads - b.downloads);
+    } else if (sortOrder === 'high') {
+      return items.sort((a, b) => b.downloads - a.downloads);
     } else {
-      return installed;
+      return items;
     }
   })();
 
@@ -50,9 +52,9 @@ const InstalledApps = () => {
               value={sortOrder}
               onChange={e => setSortOrder(e.target.value)}
             >
-              <option value="none">Sort by price</option>
-              <option value="download-asc">Low-&gt;High</option>
-              <option value="download-desc">High-&gt;Low</option>
+              <option value="none">Sort by Download</option>
+              <option value="low">Low-&gt;High</option>
+              <option value="high">High-&gt;Low</option>
             </select>
           </label>
         </div>
@@ -72,17 +74,20 @@ const InstalledApps = () => {
                     >
                       <div
                         onClick={() => navigate(`/appsDetails/${app.id}`)}
-                        className="flex gap-3"
+                        className="flex gap-3 cursor-pointer"
                       >
                         <div>
                           <img
-                            className="size-10 rounded-box"
+                            className="size-14 rounded-box"
                             src={app.image}
+                            alt={app.title}
                           />
                         </div>
                         <div>
-                          <div>{app.title}</div>
-                          <div className="text-xs font-semibold opacity-60 flex gap-4">
+                          <div className="text-xl mb-2 font-medium">
+                            {app.title}
+                          </div>
+                          <div className="text-sm font-semibold opacity-60 flex gap-4">
                             <div className="flex gap-1.5 items-center">
                               <img className="h-3" src={downloadIcon} alt="" />
                               <span className="text-[#00D390] font-medium">

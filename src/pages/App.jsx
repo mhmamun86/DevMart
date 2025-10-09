@@ -13,7 +13,7 @@ const App = ({ app }) => {
         <figure className="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
           <img
             src={image}
-            alt="Product Image"
+            alt={title}
             className="object-contain w-full h-full"
           />
         </figure>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { getApps } from '../utils/localStorage';
 import useApps from '../Hooks/useFetchData';
 import App from './App';
@@ -7,23 +7,32 @@ import NotFound from '../components/NotFound';
 
 const Apps = () => {
   const data = useApps();
-  const { apps, loading, error } = data;
+  const { apps, loading } = data;
   const [search, setSearch] = useState('');
   const [searchLoading, setSearchLoading] = useState(false);
+  const [searchedData, setSearchedData] = useState([]);
 
-  const searchData = search.trim().toLowerCase();
-  const searchedData = searchData
-    ? apps.filter(app => app.title.toLowerCase().includes(searchData))
-    : apps;
-  const handleSearch = e => {
-    const value = e.target.value;
-    setSearchLoading(true);
-    setSearch(value);
+  useEffect(() => {
+    const term = search.trim().toLowerCase();
 
-    setTimeout(() => {
+    if (term) {
+      setSearchLoading(true);
+
+      const timer = setTimeout(() => {
+        const filtered = apps.filter(data =>
+          data.title.toLowerCase().includes(term)
+        );
+        setSearchedData(filtered);
+        setSearchLoading(false);
+      }, 300);
+
+      return () => clearTimeout(timer);
+    } else {
+      setSearchedData(apps);
       setSearchLoading(false);
-    }, 500);
-  };
+    }
+  }, [search, apps]);
+
   return (
     <div className="max-w-11/12 mx-auto py-10 md:py-20">
       <div className="text-center">
@@ -42,9 +51,9 @@ const Apps = () => {
 
           <label className="input">
             <input
-              value={search}
-              onChange={handleSearch}
               type="search"
+              value={search}
+              onChange={e => setSearch(e.target.value)}
               placeholder="Search Products"
             />
           </label>

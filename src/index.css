@@ -22,3 +22,7 @@ a.active {
       hover:shadow-lg hover:border-gray-400 hover:scale-105 
       transition-all duration-300;
 }
+
+.stat-div {
+  @apply stat space-y-4 shadow-md hover:shadow-lg transition duration-30
+}

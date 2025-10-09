@@ -9,18 +9,19 @@ import Spinner from '../components/Spinner';
 
 const InstalledApps = () => {
   const data = useApps();
-  const { loading } = data;
+  const { apps, loading } = data;
   const [installed, setInstalled] = useState(() => getApps());
   const navigate = useNavigate();
   const [sortOrder, setSortOrder] = useState('none');
   const sortedItem = (() => {
     const items = [...installed];
+    const itemsApps = apps.filter(app => items.includes(app.id));
     if (sortOrder === 'low') {
-      return items.sort((a, b) => a.downloads - b.downloads);
+      return itemsApps.sort((a, b) => a.downloads - b.downloads);
     } else if (sortOrder === 'high') {
-      return items.sort((a, b) => b.downloads - a.downloads);
+      return itemsApps.sort((a, b) => b.downloads - a.downloads);
     } else {
-      return items;
+      return itemsApps;
     }
   })();
 
@@ -68,7 +69,7 @@ const InstalledApps = () => {
                       className="bg-white flex justify-between gap-4 p-3 rounded-lg"
                     >
                       <div
-                        onClick={() => navigate(`/appsDetails/${app.id}`)}
+                        onClick={() => navigate(`/apps/appsDetails/${app.id}`)}
                         className="flex gap-3 cursor-pointer"
                       >
                         <div>

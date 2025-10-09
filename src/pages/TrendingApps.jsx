@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router';
 const TrendingApps = () => {
   const navigate = useNavigate();
   const data = useApps();
-  const { apps, loading, error } = data;
+  const { apps, loading } = data;
   const trendingAppsData = apps.slice(0, 8);
   return (
     <div>
@@ -35,7 +35,6 @@ const TrendingApps = () => {
         </div>
         <div className="lg:hidden">
           <States></States>
-          
         </div>
       </div>
     </div>

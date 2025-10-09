@@ -34,12 +34,11 @@ const AppDetails = () => {
 
   if (loading) return <Spinner></Spinner>;
   const app = apps.find(el => el.id === appId);
-  console.log(app.id);
   if (!app) {
     return <NotFound></NotFound>;
   }
 
-  const isDuplicate = installed.some(el => el.id === app.id);
+  const isDuplicate = installed.some(el => el === app.id);
   const {
     image,
     title,

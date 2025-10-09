@@ -4,7 +4,7 @@ import useApps from '../Hooks/useFetchData';
 
 const States = () => {
   const data = useApps();
-  const { apps, loading, error } = data;
+  const { apps } = data;
 
   const totalDownloads = apps.reduce((sum, app) => sum + app.downloads, 0);
   const totalReviews = apps.reduce((sum, app) => sum + app.reviews, 0);
@@ -16,7 +16,7 @@ const States = () => {
           Trusted by Millions, Built for You
         </h1>
         <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div className="stat space-y-4 shadow-md hover:shadow-lg transition duration-300">
+          <div className="stat-div">
             <div className="opacity-80">
               <h3>Total Downloads</h3>
             </div>
@@ -26,7 +26,7 @@ const States = () => {
             <div className="opacity-80">21% more than last month</div>
           </div>
 
-          <div className="stat space-y-4 shadow-md hover:shadow-lg transition duration-30">
+          <div className="stat-div">
             <div className="opacity-80">
               <h3>Total Reviews</h3>
             </div>
@@ -36,7 +36,7 @@ const States = () => {
             <div className="opacity-80">21% more than last month</div>
           </div>
 
-          <div className="stat space-y-4 shadow-md hover:shadow-lg transition duration-30">
+          <div className="stat-div">
             <div className="opacity-80">
               <h3>Active Apps</h3>
             </div>

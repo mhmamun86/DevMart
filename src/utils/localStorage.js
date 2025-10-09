@@ -16,7 +16,7 @@ const updateApps = (app, installed, setInstalled) => {
   if (isDuplicate) {
     return installed;
   } else {
-    const updated = [...installed, app];
+    const updated = [...installed, app.id];
     localStorage.setItem('installed', JSON.stringify(updated));
     toast.success(`Successfully Installed ${app.title} `);
     setInstalled(updated);
@@ -26,7 +26,7 @@ const updateApps = (app, installed, setInstalled) => {
 
 const removeApps = (id, setInstalled) => {
   const installed = getApps();
-  const getApp = installed.find(a => a.id === id);
+  const getApp = installed.find(a => a === id);
 
   Swal.fire({
     title: `Uninstall <br/> ${getApp.title} ?`,
@@ -38,7 +38,7 @@ const removeApps = (id, setInstalled) => {
   }).then(result => {
     if (result.isConfirmed) {
       toast.success('Uninstalled successfully!');
-      const updatedInstalledApps = installed.filter(a => a.id !== id);
+      const updatedInstalledApps = installed.filter(a => a !== id);
       localStorage.setItem('installed', JSON.stringify(updatedInstalledApps));
       setInstalled(updatedInstalledApps);
 

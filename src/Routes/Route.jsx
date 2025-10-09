@@ -6,11 +6,13 @@ import About from '../pages/About';
 import Apps from '../pages/Apps';
 import AppDetails from '../pages/AppDetails';
 import InstalledApps from '../pages/InstalledApps';
+import Error from '../components/Error';
 
 export const router = createBrowserRouter([
   {
     path: '/',
     Component: Root,
+    errorElement: <Error></Error>,
     children: [
       {
         index: true,

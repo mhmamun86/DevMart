@@ -18,11 +18,13 @@
     "@tailwindcss/vite": "^4.1.13",
     "axios": "^1.12.2",
     "react": "^19.1.1",
+    "react-countup": "^6.5.3",
     "react-dom": "^19.1.1",
     "react-router": "^7.9.3",
     "react-toastify": "^11.0.5",
     "recharts": "^3.2.1",
     "styled-components": "^6.1.19",
+    "sweetalert2": "^11.25.0",
     "tailwindcss": "^4.1.13"
   },
   "devDependencies": {

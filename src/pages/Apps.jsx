@@ -3,40 +3,54 @@ import { getApps } from '../utils/localStorage';
 import useApps from '../Hooks/useFetchData';
 import App from './App';
 import Loader from '../components/Loader';
+import NotFound from '../components/NotFound';
 
 const Apps = () => {
   const data = useApps();
   const { apps, loading, error } = data;
   const [search, setSearch] = useState('');
+  const [searchLoading, setSearchLoading] = useState(false);
+
   const searchData = search.trim().toLowerCase();
   const searchedData = searchData
     ? apps.filter(app => app.title.toLowerCase().includes(searchData))
     : apps;
+  const handleSearch = e => {
+    const value = e.target.value;
+    setSearchLoading(true);
+    setSearch(value);
+
+    setTimeout(() => {
+      setSearchLoading(false);
+    }, 500);
+  };
   return (
-    <div className="max-w-11/12 mx-auto py-20">
+    <div className="max-w-11/12 mx-auto py-10 md:py-20">
       <div className="text-center">
-        <h2 className="font-bold text-5xl">Your Installed Apps</h2>
+        <h2 className="font-bold text-3xl lg:text-5xl mb-4">
+          Your Installed Apps
+        </h2>
         <p className="text-xl text-[#627382]">
           Explore All Trending Apps on the Market developed by us
         </p>
       </div>
       <div className="space-y-6">
-        <div className="flex justify-between py-5 items-center">
-          <h1 className="text-3xl font-semibold">
+        <div className="flex flex-col md:flex-row gap-3 md:gap-0 justify-between py-5 items-center">
+          <h1 className="lg:text-3xl text-2xl font-semibold">
             ({searchedData.length}) Apps Found.
           </h1>
 
           <label className="input">
             <input
               value={search}
-              onChange={e => setSearch(e.target.value)}
+              onChange={handleSearch}
               type="search"
               placeholder="Search Products"
             />
           </label>
         </div>
       </div>
-      {loading ? (
+      {loading || searchLoading ? (
         <Loader count={16}></Loader>
       ) : searchedData.length !== 0 ? (
         <div>
@@ -49,7 +63,7 @@ const Apps = () => {
           </div>
         </div>
       ) : (
-        <p>No apps</p>
+        <NotFound></NotFound>
       )}
     </div>
   );

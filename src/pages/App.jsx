@@ -9,10 +9,15 @@ const App = ({ app }) => {
   const navigate = useNavigate();
   return (
     <div onClick={() => navigate(`/appsDetails/${id}`)}>
-      <div className="card space-y-4 bg-base-100 shadow-sm hover:scale-105 transition ease-in-out p-4">
-        <figure className="h-48 overflow-hidden">
-          <img className="w-full object-contain" src={image} alt={title} />
+      <div className="card space-y-4 bg-base-100 shadow-sm hover:scale-105 transition ease-in-out p-4 cursor-pointer">
+        <figure className="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
+          <img
+            src={image}
+            alt="Product Image"
+            className="object-contain w-full h-full"
+          />
         </figure>
+
         <div className="card-body p-0">
           <h2 className="card-title">{title}</h2>
           <div className="flex justify-between">

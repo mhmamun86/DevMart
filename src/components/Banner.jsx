@@ -3,8 +3,10 @@ import playLogo from '../assets/play.png';
 import appleLogo from '../assets/apple.png';
 import hero from '../assets/hero.png';
 import States from './states';
+import { useNavigate } from 'react-router';
 
 const Banner = () => {
+  const navigate = useNavigate();
   return (
     <div className="text-center mt-5 md:mt-20 ">
       <div className="space-y-4 max-w-11/12 mx-auto">
@@ -20,13 +22,21 @@ const Banner = () => {
           into digital experiences that truly make an impact.
         </p>
         <div className="flex gap-4 items-center justify-center">
-          <div className="flex gap-2.5 items-center py-3 px-6 rounded-sm border-2 border-[#D2D2D2]">
+          <div
+            onClick={() => window.open('https://play.google.com/', '_blank')}
+            className="flex gap-2.5 items-center py-3 md:px-6 px-3 rounded-sm border-2 border-[#D2D2D2] cursor-pointer"
+          >
             <img className="h-8" src={playLogo} />
-            <h3 className="font-semibold text-xl">Google Play</h3>
+            <h3 className="font-semibold text-sm md:text-xl">Google Play</h3>
           </div>
-          <div className="flex gap-2.5 items-center py-3 px-6 rounded-sm border-2 border-[#D2D2D2]">
+          <div
+            onClick={() =>
+              window.open('https://www.apple.com/app-store/', '_blank')
+            }
+            className="flex gap-2.5 items-center py-3 px-6 rounded-sm border-2 border-[#D2D2D2] cursor-pointer"
+          >
             <img className="h-8" src={appleLogo} />
-            <h3 className="font-semibold text-xl">App Store</h3>
+            <h3 className="font-semibold text-sm md:text-xl">App Store</h3>
           </div>
         </div>
         <div className="flex justify-center items-center mb-0">

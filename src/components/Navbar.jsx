@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router';
+import { Link, NavLink } from 'react-router';
 import logo from '../assets/logo.png';
 import gitIcon from '../assets/github_icon.png';
 
@@ -47,10 +47,13 @@ const Navbar = () => {
             </ul>
           </div>
           <div className="flex gap-2 items-center">
-            <img className="h-10" src={logo} />
-            <NavLink to={'/'}>
+            <Link to={'/'}>
+              <img className="h-10" src={logo} />
+            </Link>
+
+            <Link to={'/'}>
               <h2 className="text-xl font-bold text-gradiant">Dev Mart</h2>
-            </NavLink>
+            </Link>
           </div>
         </div>
         <div className="navbar-center hidden lg:flex">

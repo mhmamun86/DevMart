@@ -12,8 +12,8 @@ const TrendingApps = () => {
   const trendingAppsData = apps.slice(0, 8);
   return (
     <div>
-      <div className="text-center max-w-11/12 mx-auto ">
-        <h1 className="font-bold text-5xl">Trending Apps</h1>
+      <div className="text-center max-w-11/12 mx-auto mt-12">
+        <h1 className="font-bold text-3xl lg:text-5xl mb-4">Trending Apps</h1>
         <p className="text-xl text-[#627382]">
           Explore All Trending Apps on the Market developed by us
         </p>
@@ -29,12 +29,13 @@ const TrendingApps = () => {
 
         <div
           onClick={() => navigate(`/apps`)}
-          className="btn mt-6 text-white bg-linear-to-r from-[#632EE3] to-[#9F62F2]"
+          className="btn mt-6 text-white bg-linear-to-r from-[#632EE3] to-[#9F62F2] mb-8"
         >
           Show All
         </div>
         <div className="lg:hidden">
           <States></States>
+          
         </div>
       </div>
     </div>

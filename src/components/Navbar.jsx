@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router';
 import logo from '../assets/logo.png';
 import gitIcon from '../assets/github_icon.png';
+import { FaBars } from 'react-icons/fa';
+import { RiCloseLargeFill } from 'react-icons/ri';
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
   const navLink = (
     <>
       <li className="p-2">
@@ -54,49 +57,33 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-        <div
-          className="dropdown 
-        lg:hidden"
-        >
-          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              {' '}
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h8m-8 6h16"
-              />{' '}
-            </svg>
-          </div>
-          <ul
-            tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 right-0 rounded-box z-1 mt-3 w-52 p-2 shadow"
+        <div className="relative lg:hidden">
+          {/* Toggle Button */}
+          <div
+            onClick={() => setIsOpen(!isOpen)}
+            role="button"
+            className="btn btn-ghost flex items-center"
           >
-            {navLink}
-            <div className="flex-1 flex items-center">
-              <div className="flex-1 flex justify-center">
-                <div className=" ">
+            {isOpen ? <RiCloseLargeFill /> : <FaBars />}
+          </div>
+          {isOpen && (
+            <div className="absolute top-full right-0 w-52 mt-4 z-20">
+              <ul className="bg-base-100 rounded-lg shadow-lg p-4 space-y-2">
+                {navLink}
+                <div className="flex justify-center mt-2">
                   <a
                     href="https://github.com/mhmamun86/DevMart"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className=""
                   >
-                    <div className="btn text-white bg-linear-to-r from-[#632EE3] to-[#9F62F2]">
-                      <img src={gitIcon} /> Contribute
+                    <div className="btn text-white bg-linear-to-r from-[#632EE3] to-[#9F62F2] flex items-center gap-2">
+                      <img src={gitIcon} alt="GitHub" /> Contribute
                     </div>
                   </a>
                 </div>
-              </div>
+              </ul>
             </div>
-          </ul>
+          )}
         </div>
       </div>
       {/* <div className="navbar w-11/12 mx-auto ">

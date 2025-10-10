@@ -47,7 +47,7 @@ const Apps = () => {
         </div>
       </div>
       {loading || searchLoading ? (
-        <Loader count={16}></Loader>
+        <Loader count={searchedData.length || 16}></Loader>
       ) : searchedData.length !== 0 ? (
         <div>
           <div>

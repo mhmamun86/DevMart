@@ -66,7 +66,7 @@ const InstalledApps = () => {
                   return (
                     <li
                       key={app.id}
-                      className="bg-white flex justify-between gap-4 p-3 rounded-lg"
+                      className="bg-white flex flex-col md:flex-row justify-between gap-4 p-3 rounded-lg"
                     >
                       <div
                         onClick={() => navigate(`/apps/appsDetails/${app.id}`)}

@@ -45,7 +45,7 @@ const Navbar = () => {
           <div className="flex-1 flex justify-end">
             <div className=" ">
               <a
-                href="https://github.com/mhmamun86/DevMart"
+                href="https://github.com/mhmamun86"
                 target="_blank"
                 rel="noopener noreferrer"
                 className=""
@@ -72,7 +72,7 @@ const Navbar = () => {
                 {navLink}
                 <div className="flex justify-center mt-2">
                   <a
-                    href="https://github.com/mhmamun86/DevMart"
+                    href="https://github.com/mhmamun86"
                     target="_blank"
                     rel="noopener noreferrer"
                   >

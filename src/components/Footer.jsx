@@ -18,7 +18,7 @@ const Footer = () => {
   );
   return (
     <div className="">
-      <footer className="footer grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  bg-primary sm:footer-horizontal text-white p-10">
+      <footer className="footer grid grid-cols-2 lg:grid-cols-3  bg-primary sm:footer-horizontal text-white p-10">
         <aside>
           <div className="flex gap-2 items-center">
             <Link to={'/'}>

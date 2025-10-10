@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useParams } from 'react-router';
 
 import downloadIcon from '../assets/icon-downloads.png';
@@ -24,12 +24,13 @@ const AppDetails = () => {
   const data = useApps();
   const { apps, loading } = data;
   const { id } = useParams();
-  const appId = parseInt(id);
-  const validId = apps.find(item => item.id === appId);
+  const appId = Number(id);
 
   const [installed, setInstalled] = useState(() => getApps());
 
   if (loading) return <Spinner></Spinner>;
+  const validId = apps.find(item => item.id === appId);
+  console.log(validId);
   const app = apps.find(el => el.id === appId);
   if (!app) {
     return <NotFound></NotFound>;
@@ -69,22 +70,22 @@ const AppDetails = () => {
                 </p>
               </div>
               <div className="mt-7 border-t-1 opacity-20 "></div>
-              <div className="flex gap-5 md:gap-10 lg:gap-14 my-2">
-                <div className="py-7 space-y-2 flex flex-col items-center md:items-start text-center">
+              <div className="flex gap-4 lg:gap-14 my-2">
+                <div className="py-7 space-y-2 flex flex-col items-center lg:items-start text-center">
                   <img className="h-8" src={downloadIcon} alt="download" />
                   <p className="opacity-80">Downloads</p>
                   <span className=" text-2xl md:text-4xl font-extrabold">
                     {shortNumber(downloads)}
                   </span>
                 </div>
-                <div className="py-7 space-y-2 flex flex-col items-center md:items-start text-center">
+                <div className="py-7 space-y-2 flex flex-col items-center lg:items-start text-center">
                   <img className="h-8" src={ratingIcon} alt="ratings" />
                   <p className="opacity-80">Average Ratings</p>
                   <span className="text-2xl md:text-4xl font-extrabold">
                     {ratingAvg}
                   </span>
                 </div>
-                <div className="py-7 space-y-2 flex flex-col items-center md:items-start text-center">
+                <div className="py-7 space-y-2 flex flex-col items-center lg:items-start text-center">
                   <img className="h-8" src={reviewIcon} alt="reviews" />
                   <p className="opacity-80">Total Reviews</p>
                   <span className="text-2xl md:text-4xl font-extrabold">
@@ -99,7 +100,7 @@ const AppDetails = () => {
                   className={`btn px-5 py-3.5 text-xl font-semibold text-white ${
                     isDuplicate
                       ? '!bg-[#00c985] hover:bg-gray-400 cursor-not-allowed'
-                      : 'bg-[#00D390] hover:bg-[#00c985]'
+                      : 'bg-[#00D390] hover:bg-[#00c985] skeleton'
                   }`}
                 >
                   {' '}

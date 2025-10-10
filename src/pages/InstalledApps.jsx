@@ -37,7 +37,7 @@ const InstalledApps = () => {
       </div>
 
       <div className="space-y-6">
-        <div className="flex flex-col lg:flex-row gap-3 lg:gap-0 justify-between py-5 items-center">
+        <div className="flex flex-col md:flex-row gap-3 lg:gap-0 justify-between py-5 items-center">
           <h1 className="lg:text-3xl text-2xl font-semibold">
             ({installed.length}) Apps Found.
           </h1>
